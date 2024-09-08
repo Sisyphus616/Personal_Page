@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin : 0;
+	padding : 0;
+	display :flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.container{
+	width :400px;
+	display :flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.box{
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background: #000;
+	box-shadow: 0 30px 30px rgba(0,0,0,.5);
+}
+.box .imgBx{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.box .imgBx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 0.5s;
+}
+.box:hover .imgBx img{
+	opacity: 0;
+}
+.box .content{
+	position: absolute;
+	bottom: 20px;
+	left: 10%;
+	width: 80%;
+	height: 60px;
+	background: #fff;
+	transition: 0.5s;
+	overflow: hidden;
+	
+	padding: 15px;
+	box-sizing: border-box;
+}
+.box:hover .content{
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+}
+.box .content h3{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+.box .content p{
+	margin: 10px 0 0;
+	padding: 0;
+	opacity: 0;
+	line-height: 1.2em;
+	transition: 0.5s;
+	text-align: justify;
+	font-size: 18px;
+	font-family: '华文楷体'；
+}
+.box:hover .content p{
+	opacity: 1;
+	transition-delay: 0.5s;
+}
+.return{
+	position: absolute;
+	top: 5%;
+	left: 5%;
+}
+.return a{
+	display: inline-block;
+	text-decoration: none;
+	border-radius: 20px ;
+	padding: 10px 20px;
+	transition: 0.4s linear;
+	color: rgba(178,219,234,1.00);
+	box-shadow: 0 30px 30px rgba(0,0,0,.5);
+}
+.return a:hover{
+	color: #fff;
+	background: rgba(178,219,234,1.00);
+}
+.mytitle{
+	position: absolute;
+	top: 5%;
+	left: 42%;
+	color: #fff;
+	align-items: center;
+/*	box-shadow: 0 30px 30px rgba(0,0,0,.5);*/
+}

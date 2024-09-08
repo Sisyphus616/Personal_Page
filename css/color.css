@@ -1,0 +1,10 @@
+@charset "utf-8";
+body  {
+/*	background-color: rgba(178,219,234,1.00);*/
+/*	background-color: #006272*/
+	background-color: #003e46
+}
+body header {
+	min-height: 40px;
+	color:rgba(255,255,255,1.00);
+}

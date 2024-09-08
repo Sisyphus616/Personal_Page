@@ -1,0 +1,153 @@
+@charset "utf-8";
+.cttable{
+	margin: 0 auto;
+}
+/*正文字体居中*/
+.cttext{
+	text-align:center;
+	color: rgba(255,255,255,1.00);
+}
+/*text+"字体缩写"是字体格式*/
+/*
+.textkt{
+	font-family: 华文楷体
+}
+.textyh{
+	font-family: 微软雅黑
+}
+.textst{
+	font-family: 华文宋体
+}
+*/
+/**********************************打字框输入动效**************************************/
+.typing{
+	width: 9em;/*字体个数*/
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    animation: typing 3s steps(9, end), blink-caret .75s step-end infinite;
+    overflow: hidden;
+	text-align: center;
+	color: rgba(255,255,255,1.00);
+}
+/* 打印效果 */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 9em; }
+}
+/* 闪动光标 */
+@keyframes blink-caret {
+  from, to { box-shadow: 1px 0 0 0 transparent; }
+  50% { box-shadow: 1px 0 0 0; }
+}
+/**/
+.landing-page{
+	width : 100%;
+	height : 100vh;
+	background: #000;
+}
+.landing-page::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top : 0;
+	width : 100%;
+	height :100%;
+	background: url("../images/bg.png") no-repeat;
+	background-size: cover;
+	opacity: .3;
+}
+.page-content{
+	position :absolute;
+	transform: translate(50%,50%);
+	z-index: 1;
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+}
+.float{
+	position :absolute;
+	z-index: 1;
+	justify-content: center;
+	top: 40%;
+	box-shadow: 0 30px 30px rgba(0,0,0,.5);
+}
+.page-content a{
+	display: inline-block;
+	text-decoration: none;
+	border: 1px solid rgba(178,219,234,1.00);
+	padding: 10px 20px;
+	transition: 0.4s linear;
+	cursor: pointer;
+	color: rgba(178,219,234,1.00);
+}
+.page-content a:hover{
+	color: #fff;
+	background: rgba(178,219,234,1.00);
+}
+header a{
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 8px 8px;
+	transition: 0.4s linear;
+}
+header a:hover{
+	color: #fff;
+	background: #76EEC6;
+}
+body{
+	display: flex;
+	min-height: 100vh;
+}
+#popup{
+	position: fixed;
+	top: -100%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1000;
+	background: #fff;
+	width: 450px;
+	padding: 80px 50px 50px;
+	box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+	transition: 0.5s linear;
+	visibility: hidden;
+}
+#popup .pop{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#popup .pop h2{
+	font-size: 24px;
+	font-weight: 500;
+	font-family: '宋体';
+	margin: 20px 0 10px;
+}
+#popup.active{
+	top: 40%;
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
+}
+.close{
+	position: absolute;
+	top: 70%;
+	left: 42%;
+	cursor: pointer;
+	border: 1px solid rgba(178,219,234,1.00);
+	padding: 10px 20px;
+	color: rgba(178,219,234,1.00);
+	transition: 0.4s linear;
+}
+.close:hover{
+	color: #fff;
+	background: rgba(178,219,234,1.00);
+}
+#blur.active{
+	filter: blur(20px);
+	pointer-events: none;
+	user-select: none;
+}
